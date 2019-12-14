@@ -1,0 +1,26 @@
+h1, h2,h3{
+    
+    border: 1px solid red;
+    padding: 20px 30px;
+    background-color:pink;
+    cursor: pointer;
+    display: inline-block;
+    margin: 40px 0;
+}
+
+body {
+    width: 80%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+  }
+
+  h4{
+      font-size: 30px;
+  }
+  .lastResult {
+    color: white;
+    padding: 3px;
+  }
+
+
