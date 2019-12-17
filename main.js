@@ -1,133 +1,68 @@
-/*const player= document.querySelector('p');
+/*const button = document.querySelector('button');
 
-player.addEventListener('click', updatename);
+button.addEventListener('click', greeting);
 
-function updatename(){
-    let name = prompt ('enter a new name');
-
-    player.textContent= 'player : ' +name;
-}*/
-
-/*const h1= document.querySelector('h1');
-
-const h2= document.querySelector('h2');
-
-const h3= document.querySelector('h3');
-
-
-h1.addEventListener('click', name);
-
-h2.addEventListener('click', email);
-
-h3.addEventListener('click', number);
-
-function name(){
-    let na = prompt('enter your name');
-
-    h1.textContent= 'name : ' +na;
+function greeting(){
+    let name = prompt('what is your name?');
+    alert('hello ' + name + ' nice to meet you')
 }
-function email(){
-    let em = prompt('enter your em');
+*/
 
-    h2.textContent= 'email : ' +em;
-}
-function number(){
-    let no = prompt('enter your number');
+/*const name = document.querySelector('h1');
+const age = document.querySelector('h2');
+const p1 = document.querySelector('.para1');
+const p2 = document.querySelector('.para2');
+const data = document.querySelector('h3')
 
-    h3.textContent= 'number : ' +no;
-}*/
+const button = document.querySelector('button');
+let count = 1;
 
-
-/*guss the number game */
-
+data.addEventListener('click', greet)
 
 
-let randomNumber = Math.floor(Math.random() * 100) + 1; // generate random number between 1 100
+function greet(){
+    //questions
+    let na = prompt('whats your name?');
+    let em = prompt('whats your email?');
+    let ag = prompt('what is your age?');
+    // adding paragraph 
+    let graph = document.createElement('p');
+    let content = document.createTextNode('');
+    graph.appendChild(content);
+    let element = document.getElementById('div1');
+    element.appendChild(graph);
+    p1.textContent = ': ' +na;
 
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
-                                                                    //"const" im selecting HTML classes using the "document.queryselector"
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
-
-let guesscount = 1;
-let resetButton;
-
-guessSubmit.addEventListener('click', checkguess);  //creating an event listenenr
-
-function checkguess(){
-    let userguess = Number(guessField.value);
-    
-    if (guesscount === 1){
-        guesses.textContent = 'previous guesses: ';
+    for (graph = 0; graph < ag.length; graph++){
+        content += ag[graph];
     }
-
-    guesses.textContent += userguess + ' -- ';
-
-    if (userguess === 20){
-        lastResult.textContent = 'congratculation you got it right !!!!';
-        lastResult.style.backgroundColor = 'green';
-        lastResult.style.padding = '10px 5px';
-        lastResult.style.fontSize = '22px'
-        lowOrHi.textContent= '';
-        setGameOver();
-    }
-
-
-    else if (guesscount === 10){
-        lastResult.textContent = 'game over!!!';
-        setGameOver();
-    }
-
-    else {
-        lastResult.textContent = 'wrong';
-        lastResult.style.backgroundColor = 'red';
-        
-        if (userguess < randomNumber){
-            lowOrHi.textContent = 'your guess is too low';
-        }
-        else if(userguess > randomNumber){
-            lowOrHi.textContent = 'your guess is too high';
-        }
-    }
-
-
-
-    guesscount++;
-    guessField.value;
-    guessField.focus();
-
-}
-
-function setGameOver() {
-    guessField.disabled = true;
-    guessSubmit.disabled = true;
-    resetButton = document.createElement('button');
-    resetButton.textContent = 'Start new game';
-    document.body.appendChild(resetButton);
-    resetButton.addEventListener('click', resetGame);
 }
 
 
-function resetGame() {
-guesscount = 1;
+//console.log(greet);
+/*p1.textContent = ' : ' + na;
+p1.style.padding = '20px'
+p1.style.fontSize = '20px'
 
-const resetParas = document.querySelectorAll('.resultParas p');
-for (let i = 0 ; i < resetParas.length ; i++) {
-    resetParas[i].textContent = '';
+let ag = prompt('whats your age?');
+p2.textContent = ' : ' + ag;
+p2.style.padding = '20px'
+p2.style.fontSize = '20px'*/
+
+
+
+
+const item1 = document.querySelector ('.items');
+const item2 = document.querySelector ('.items');
+const item3 = document.querySelector ('.items');
+const pa1 = document.querySelector ('.pa');
+const pa2 = document.querySelector ('.pa');
+const pa3 = document.querySelector ('.pa');
+
+item1.addEventListener('click', data)
+function data(){
+    let test = prompt('jut testing');
+    pa1.textContent = '  ' + test;
+
 }
 
-resetButton.parentNode.removeChild(resetButton);
-
-guessField.disabled = false;
-guessSubmit.disabled = false;
-guessField.value = '';
-guessField.focus();
-
-lastResult.style.backgroundColor = 'white';
-
-randomNumber = Math.floor(Math.random() * 100) + 1;
-}
-
-console.log(checkguess)
