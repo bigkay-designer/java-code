@@ -55,14 +55,78 @@ p2.style.fontSize = '20px'*/
 const item1 = document.querySelector ('.items');
 const item2 = document.querySelector ('.items');
 const item3 = document.querySelector ('.items');
-const pa1 = document.querySelector ('.pa');
-const pa2 = document.querySelector ('.pa');
-const pa3 = document.querySelector ('.pa');
+const pa1 = document.querySelector ('.pa1');
+const pa2 = document.querySelector ('.pa2');
+const pa3 = document.querySelector ('.pa3');
 
 item1.addEventListener('click', data)
-function data(){
-    let test = prompt('jut testing');
-    pa1.textContent = '  ' + test;
+item2.addEventListener('click', data)
+item3.addEventListener('click', data)
 
+function data(){
+    let name = prompt('what is your name?');
+    pa1.textContent = '  ' + name;
+
+    let email = prompt('what is your email?');
+    pa2.textContent = '  ' + email;
+
+
+    let age = prompt('what is your age?');
+    pa3.textContent = '  ' + age;
+}
+
+
+
+let fruits = ['ornages', 'apples', 'watermelon', 'pineapple'];
+
+console.log(fruits.length);
+fruits.indexOf("pineapple");
+console.log(fruits.slice (0,3));
+let nag = 'test'
+console.log(nag.replace ('tes', '123'));
+console.log(fruits.pop());
+console.log(fruits.push('kiwi'));
+console.log(fruits.shift())
+console.log(fruits.unshift('og'));
+fruits.push ('pineapple')
+fruits.unshift('grapes');
+
+
+//loop;
+
+let emptyArray = [];
+ let add;
+
+for(i = 0; i < 10 ; i++){
+    emptyArray.push (i);
+    add = i + ' : ' + fruits.join(' and ');
+    fruits
+    console.log(add)
+}
+
+console.log(emptyArray);
+
+
+console.log(fruits);
+
+
+var age = prompt('what is your age?');
+
+if ( (age > 18) && (age < 35) ){
+    status = 'targeted age';
+    console.log(status);
+
+}
+
+else if ((age <18)){
+    status = 'not eligible';
+    console.log (status)
+}
+
+
+else {
+    status = 'non targeted age';
+    
+    console.log(status)
 }
 
