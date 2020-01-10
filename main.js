@@ -356,31 +356,124 @@ p2.style.fontSize = '20px'*/
 // console.log(arr)
 
 
-let product = ['Underpants:6.99',
-'Socks:5.99',
-'T-shirt:14.99',
-'Trousers:31.99',
-'Shoes:23.99',
-'final'
-]
+// let product = ['Underpants:6.99',
+// 'Socks:5.99',
+// 'T-shirt:14.99',
+// 'Trousers:31.99',
+// 'Shoes:23.99',
+// 'final'
+// ]
 
-let tot = 0
+// let tot = 0
 
-for( let i = 0 ; i < product.length ; i++){
-    let input = product[i]
-    let sep = product[i].split(':')
-    let name = sep[0]
+// for( let i = 0 ; i < product.length ; i++){
+//     let input = product[i]
+//     let sep = product[i].split(':')
+//     let name = sep[0]
 
-   let toNum =  sep[1] = Number(sep[1])
+//    let toNum =  sep[1] = Number(sep[1])
    
-   tot += toNum
+//    tot += toNum
 
-    let all = name + ' $ ' +  toNum
+//     let all = name + ' $ ' +  toNum
 
-    let final = sep[-1]
+//     let final = sep[-1]
 
-    console.log()
-    // console.log(all)
-
+//     console.log(all)
+//     // console.log(all)
    
+// }
+
+
+        //Quiz
+
+// const list = document.querySelector('#uls');
+// const searchInput = document.querySelector('#inp-field');
+// const searchBtn = document.querySelector('#pa-btn');
+
+// list.innerHTML = '';
+
+// let myHistory= [];
+
+// searchBtn.onclick = function() {
+//     if(searchInput.value !== '') {
+//         myHistory.unshift(searchInput.value);
+       
+//         list.innerHTML = '';
+       
+
+//  for(let i = 0; i < myHistory.length; i++) {
+//  itemText = myHistory[i];
+//  const listItem = document.createElement('li');
+//  listItem.textContent = itemText;
+//  list.appendChild(listItem);
+//  }
+
+//  if(myHistory.length >= 5) {
+//  myHistory.pop();
+//  }
+
+//  console.log(itemText)
+	
+//  searchInput.value = '';
+//  searchInput.focus();
+ 
+// }
+// }		
+
+
+        //Assessment of modul 1
+
+
+const customName = document.getElementById('customname');
+const randomize = document.querySelector('.randomize');
+const story = document.querySelector('.story');
+
+function randomValueFromArray(array){
+const random = Math.floor(Math.random()*array.length);
+return array[random];
+}
+
+//2. RAW TEXT STRINGS
+
+let storyText = 'It was 94 fahrenheit outside, so : insertx : went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
+
+let insertX = ['Willy the Goblin',  'Big Daddy Father Christmas']
+
+let insertY = ['the soup kitchen Disneyland', 'the White House']
+
+let insertZ = ['spontaneously combusted melted into a puddle on the sidewalk', 'turned into a slug and crawled away']
+//3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
+
+randomize.addEventListener('click', result);
+
+function result() {
+
+    let newStory = storyText
+    let xItem  = randomValueFromArray(insertX);
+    let yItem = randomValueFromArray(insertY)
+    let zItem = randomValueFromArray(insertZ)
+
+    newStory = newStory.replace('insertx', xItem)
+    newStory = newStory.replace('insertx', xItem)
+    newStory = newStory.replace('inserty', yItem)
+    newStory = newStory.replace('insertz', zItem)
+
+if(customName.value !== '') {
+    let name = customName.value;
+    newStory = newStory.replace('Bob', name)
+    
+}
+
+if(document.getElementById("uk").checked) {
+    let weight = Math.round(300 / 14,) + ' ' +  'stones';
+    let temperature =  Math.round((94 - 32) * 5/9, ) + ' ' + ' centigrade';
+    newStory = newStory.replace('94 fahrenheit', temperature)
+    newStory = newStory.replace('300 pounds', weight)
+
+
+}
+
+story.textContent =newStory ;
+story.style.visibility = 'visible';
 }
