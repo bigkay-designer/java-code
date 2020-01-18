@@ -425,55 +425,229 @@ p2.style.fontSize = '20px'*/
         //Assessment of modul 1
 
 
-const customName = document.getElementById('customname');
-const randomize = document.querySelector('.randomize');
-const story = document.querySelector('.story');
+// const customName = document.getElementById('customname');
+// const randomize = document.querySelector('.randomize');
+// const story = document.querySelector('.story');
 
-function randomValueFromArray(array){
-const random = Math.floor(Math.random()*array.length);
-return array[random];
-}
+// function randomValueFromArray(array){
+// const random = Math.floor(Math.random()*array.length);
+// return array[random];
+// }
 
-//2. RAW TEXT STRINGS
+// //2. RAW TEXT STRINGS
 
-let storyText = 'It was 94 fahrenheit outside, so : insertx : went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
+// let storyText = 'It was 94 fahrenheit outside, so : insertx : went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
 
-let insertX = ['Willy the Goblin',  'Big Daddy Father Christmas']
+// let insertX = ['Willy the Goblin',  'Big Daddy Father Christmas']
 
-let insertY = ['the soup kitchen Disneyland', 'the White House']
+// let insertY = ['the soup kitchen Disneyland', 'the White House']
 
-let insertZ = ['spontaneously combusted melted into a puddle on the sidewalk', 'turned into a slug and crawled away']
-//3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
+// let insertZ = ['spontaneously combusted melted into a puddle on the sidewalk', 'turned into a slug and crawled away']
+// //3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
-randomize.addEventListener('click', result);
+// randomize.addEventListener('click', result);
 
-function result() {
+// function result() {
 
-    let newStory = storyText
-    let xItem  = randomValueFromArray(insertX);
-    let yItem = randomValueFromArray(insertY)
-    let zItem = randomValueFromArray(insertZ)
+//     let newStory = storyText
+//     let xItem  = randomValueFromArray(insertX);
+//     let yItem = randomValueFromArray(insertY)
+//     let zItem = randomValueFromArray(insertZ)
 
-    newStory = newStory.replace('insertx', xItem)
-    newStory = newStory.replace('insertx', xItem)
-    newStory = newStory.replace('inserty', yItem)
-    newStory = newStory.replace('insertz', zItem)
+//     newStory = newStory.replace('insertx', xItem)
+//     newStory = newStory.replace('insertx', xItem)
+//     newStory = newStory.replace('inserty', yItem)
+//     newStory = newStory.replace('insertz', zItem)
 
-if(customName.value !== '') {
-    let name = customName.value;
-    newStory = newStory.replace('Bob', name)
+// if(customName.value !== '') {
+//     let name = customName.value;
+//     newStory = newStory.replace('Bob', name)
     
-}
+// }
 
-if(document.getElementById("uk").checked) {
-    let weight = Math.round(300 / 14,) + ' ' +  'stones';
-    let temperature =  Math.round((94 - 32) * 5/9, ) + ' ' + ' centigrade';
-    newStory = newStory.replace('94 fahrenheit', temperature)
-    newStory = newStory.replace('300 pounds', weight)
+// if(document.getElementById("uk").checked) {
+//     let weight = Math.round(300 / 14,) + ' ' +  'stones';
+//     let temperature =  Math.round((94 - 32) * 5/9, ) + ' ' + ' centigrade';
+//     newStory = newStory.replace('94 fahrenheit', temperature)
+//     newStory = newStory.replace('300 pounds', weight)
 
 
-}
+// }
 
-story.textContent =newStory ;
-story.style.visibility = 'visible';
+// story.textContent =newStory ;
+// story.style.visibility = 'visible';
+// }
+
+            ///end of model 1 assessment
+
+
+            // Conditional statements
+
+            
+// let sec = document.querySelector('#sec')
+// let para = document.querySelector('#para')
+
+// sec.addEventListener('change', action)
+
+// function action(){
+//     let choice = sec.value
+
+//     if(choice === 'sunny'){
+//         para.textContent = 'Today the weather is lovely'
+//     }
+
+//     else if(choice === 'rainy'){
+//         para.textContent = 'oops todays weather is moving dead'
+//     }
+
+//     else{
+//         para.textContent = 'who dont love snow whooo'
+//     }
+// }
+
+
+// let sec = document.querySelector('#sec')
+// let para = document.querySelector('#para')
+
+// sec.addEventListener('change', action)
+
+// function action(){
+//     let choice = sec.value
+//     let temperature = prompt()
+
+//     if(choice === 'sunny'){
+//     // this is same as above (if (choice === 'sunny' && temperature < 86))
+//         if(temperature < 86){
+//             para.textContent = 'the temperature is : ' + temperature;
+
+//             console.log(para)
+//         }
+
+//         else if (temperature >= 86){
+//             para.textContent = 'too cold its >' + temperature
+//         }
+//     }
+
+// }
+
+
+            //switch statements
+
+
+
+// const select = document.querySelector('#sec')
+// const para = document.querySelector('#para')
+
+// select.addEventListener('change', setWeather)
+
+// function setWeather() {
+//     const choice = select.value;
+
+//     switch (choice) {
+//       case 'sunny':
+//         para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+//         break;      
+//       case 'rainy':
+//         para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+//         break;
+//       case 'snowy':
+//         para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+//       break;
+//         default:
+//             para.textContent = '';
+//     } 
+// }
+
+
+        //Ternary operator example
+
+// const select = document.querySelector('#sec')
+// const html = document.querySelector('html')
+// let black =   html.style.backgroundColor = 'black'
+//   let white = html.style.backgroundColor = 'white'
+
+// function update(black, white) {
+//     html.style.backgroundColor = black
+//     html.style.backgroundColor = white
+// }
+
+// select.onchange = function () {
+//     (select.value === 'black') ? update('black') : update('white')
+// }
+
+
+            //first challenge (setting months of the year in their correct days)
+
+// let select = document.querySelector('#select')
+// let list = document.querySelector('#list-item')
+
+// select.onchange = function () {
+//     let choice = select.value
+//     let days = 31;
+//     for (let i = 1; i <= days; i++) {
+
+//         if (choice === 'feb') {
+//             days = 28
+//         }
+//         else if (choice === 'apr' || choice === 'jun' || choice === 'sep' || choice
+//             === 'dec') {
+//             days = 30
+//         }
+
+//         let li = document.createElement('li')
+//         li.textContent = i;
+//         list.appendChild(li)
+        
+//     }
+
+// }
+
+
+        //second challenge (changing background color using ternary operator )
+
+// const select = document.querySelector('#sec')
+// let body = document.querySelector('body')
+
+// let whit; 
+// let black;
+// let yellow;
+// let purble;
+
+
+// select.onchange = function () {
+//     let choice = select.value
+
+//     switch (choice) {
+//         case 'white':
+//             white = body.style.backgroundColor = 'white';
+//             break;
+//         case 'black':
+//             black = body.style.backgroundColor = 'black';
+//             break;
+//         case 'yellow':
+//             yellow = body.style.backgroundColor = 'yellow';
+//             break;
+//         case 'purble':
+//             purble = body.style.backgroundColor = 'purple';
+//             break
+       
+//     }
+// }
+
+
+                //loops
+
+// for (let i = 1; i < 31; i++){
+//         let html = document.querySelector('body')
+//         let body = document.createTextNode(' '  + i)
+//         html.appendChild(body)
+// }
+
+const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+let info = 'My cats are called ';
+const para = document.querySelector('#test');
+
+for (let i = 0; i < cats.length; i++) {
+  info += cats[i] + ', ';
+  para.textContent = info;
 }
