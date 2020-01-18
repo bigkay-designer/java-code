@@ -540,6 +540,7 @@ p2.style.fontSize = '20px'*/
 
 // select.addEventListener('change', setWeather)
 
+<<<<<<< HEAD
 // function setWeather() {
 //     const choice = select.value;
 
@@ -651,3 +652,11 @@ for (let i = 0; i < cats.length; i++) {
   info += cats[i] + ', ';
   para.textContent = info;
 }
+=======
+story.textContent =newStory ;
+story.style.visibility = 'visible';
+}
+
+
+//test
+>>>>>>> 98b7af8399fe6a51aae03840ebf8ad951bbd75e1
